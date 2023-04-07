@@ -1,15 +1,19 @@
+:root{
+
+    /* colores seccion contacto */
+    --c-contact-icons:#000000;
+}
 .svg-icon {
     width: 1em;
     height: 1em;
   }
-  
   .svg-icon path,
   .svg-icon polygon,
   .svg-icon rect {
-    fill: #4691f6;
+    fill: var(--c-contact-icons);
   }
   
   .svg-icon circle {
-    stroke: #4691f6;
+    stroke: var(--c-contact-icons);
     stroke-width: 1;
   }
