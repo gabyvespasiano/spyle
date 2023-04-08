@@ -96,9 +96,9 @@ main {
 
 /* css tarjetas de servicios */
 .main-servicios {
-  /* text-align: center;
+  text-align: center;
   margin-right: auto;
-  margin-left: auto; */
+  margin-left: auto;
 }
 
 .contenedor-servicios {
@@ -144,6 +144,20 @@ main {
   font-size: 1.3rem;
   margin: 0rem auto 2rem;
   width: 80%;
+}
+@media (max-width: 520px) {
+  .contenedor-servicios {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    max-width: 944px;
+  }
+}
+@media (min-width: 521px) {
+  .contenedor-servicios {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 944px;
+  }
 }
 @media (min-width: 1020px) {
   .contenedor-servicios {
