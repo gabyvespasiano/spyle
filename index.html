@@ -126,11 +126,11 @@
             <article class="contenedor-contacto">            
                 <form action="" method="post">
                     <label for="nombre">Nombre</label>
-                    <input type="text" placeholder="Nombre..." required/>
+                    <input type="text" id="inputNombre" placeholder="Nombre..." required/>
                     <label for="email">Correo electrónico</label>
-                    <input type="text" placeholder="ejemplo@correo.com" required/>
+                    <input type="text" id="inputCorreo" placeholder="ejemplo@correo.com" required/>
                     <label for="asunto">Asunto</label>
-                    <select name="asunto" id="" required>
+                    <select name="asunto" id="selectAsunto"  required>
                         <option value="1">Me interesan sus servicios</option>
                         <option value="2">Reportar vulnerabilidad</option>
                         <option value="3">Búsqueda laboral</option>
@@ -140,7 +140,7 @@
                     <label for="">Adjunte un archivo</label>
                     <input type="text"/>
                     <label for="mensaje">Mensaje</label>
-                    <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Escriba su mensaje aquí..." style="resize: none;overflow-y: scroll;" required></textarea>
+                    <textarea name="mensaje" id="textArea" cols="30" rows="10" placeholder="Escriba su mensaje aquí..." style="resize: none;overflow-y: scroll;" required></textarea>
                     <input class="boton" type="submit" value="Enviar"/>
                 </form>
                 <section class="info-contacto">

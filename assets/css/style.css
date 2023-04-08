@@ -333,15 +333,17 @@ main {
 /* css contacto */
 .main-contacto {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .contenedor-contacto {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem 1rem;
   place-content: center;
 }
-
+/* formulario */
 .contenedor-contacto form {
   border: 1px solid #aaa;
   border-radius: 1rem;
@@ -349,9 +351,84 @@ main {
   flex-direction: column;
   margin: 0 auto;
   max-width: 40rem;
-  padding: 1rem;
-  width: 75%;
+  padding: 3%;
+  width:90%;
+  background-color: #ffffffa9;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
+
+ form input, #textArea, #selectAsunto{
+  margin-bottom: 3%;
+}
+form #inputNombre, #inputCorreo{
+  border:0;
+  border-bottom: #7325f169 solid;
+  outline: none;
+  width: 98%;
+  color: black;
+  letter-spacing: 2px;
+  font-size: medium;
+}
+
+form label {
+  text-align: left;
+  margin-bottom: 2%;
+  letter-spacing: 2px;
+  color: #3a098adc;
+  font-style: bolder;
+  font-size: larger;
+}
+
+form #inputNombre:focus, #inputCorreo:focus {
+  border-bottom: solid #39088ab9;
+  animation:ease-in 2s ;
+  animation: inputColor 1s infinite;
+}
+#selectAsunto {
+background-color: #670afce3;
+color: white;
+height: 10%;
+font-size: medium;
+outline: none;
+
+padding-left: 2%;
+letter-spacing: 0.5px;
+}
+
+
+
+#selectAsunto:hover{
+
+  background-color:  #8d48fdee ;
+}
+
+/* #selectAsunto option::selection::after{
+  background-color: #670afc3b;
+  padding: 3%;
+
+} nofunca */
+
+form #textArea {
+  outline: none;
+  overflow-y: hidden!important;
+
+}
+.boton {
+  height: 2rem;
+  border: none ;
+  background-color: #9c64f5a4 ;
+  color: white;
+  border-radius: 1rem;
+}
+
+.boton:hover{
+  background-color: #670afce3;
+    color: white;
+    /* font-size: larger; */
+    box-shadow: 0 0 10px #7325f169, 0 0 40px #7325f169, 0 0 80px #7325f169;
+    border: #fff;
+    
+  }
 
 .info-contacto {
   display: flex;
@@ -362,7 +439,7 @@ main {
 }
 
 .info-contacto article {
-  display: flex;
+  display: none;
   gap: 2rem;
   margin-bottom: 2rem;
   align-items: center;
@@ -414,4 +491,10 @@ main {
 
 .footer section svg {
   max-width: 90vw;
+}
+
+@keyframes inputColor {
+  0% {border-bottom: #9c64f5a4 solid;}
+  50% {border-bottom: rgba(204, 0, 255, 0.897) solid;}
+  100% {border-bottom: #9c64f5a4 solid;}
 }
