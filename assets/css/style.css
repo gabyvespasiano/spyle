@@ -1,4 +1,8 @@
 :root {
+  /* header */
+  --c-header-background:#1234;
+  --c-header-links:#fff;
+  --c-header-links-hover:#000;
   /* tarjetas trabajos*/
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
@@ -7,7 +11,7 @@
 
   /* colores seccion contacto */
   --c-contact-icons: #000000;
-
+  --c-contact-text:#000000;
 
 }
 
@@ -21,7 +25,64 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+.bg{
+  position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    opacity: 0.3;
+    z-index: -10;
 
+    background-color: #e5e5f7;
+    opacity: 0.3;
+    background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 37.5px 37.5px, linear-gradient(#000dff 3px, transparent 3px) 0 -1.5px, linear-gradient(90deg, #000dff 3px, #e5e5f7 3px) -1.5px 0;
+    background-size: 75px 75px, 75px 75px, 37.5px 37.5px, 37.5px 37.5px;
+}
+/* NAV */
+header{
+  background-color: var(--c-header-background); 
+  color: var(--c-header-links);
+  font-family: 'Fredoka One', cursive;
+  align-items:center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100vw;
+  position: fixed;
+  z-index: 20;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+nav{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+  text-decoration: underline;
+  margin-right: 30px;
+}
+nav article{
+  float: left;
+}
+nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul li{
+
+}
+nav ul li a{
+  color: var(--c-header-links);
+  text-decoration: none;
+  padding: 1rem 1rem;
+}
+nav ul li a:hover{
+  background-size: 100% 2px;
+  color: var(--c-header-links-hover);
+  text-decoration: underline;
+}
 /* main */
 main {
   max-width: 1200px;
@@ -35,14 +96,19 @@ main {
 
 /* css tarjetas de servicios */
 .main-servicios {
-  text-align: center;
+  /* text-align: center;
+  margin-right: auto;
+  margin-left: auto; */
 }
 
 .contenedor-servicios {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 15rem);
+  grid-template-columns: repeat(auto-fit, 14rem);
+  max-width: 944px;
   gap: 1rem;
-  place-content: center;
+  /* text-align: unset;
+  margin-right: unset;
+  margin-left: unset; */
 }
 
 .contenedor-servicios article {
@@ -55,25 +121,37 @@ main {
   /* margin: 1rem;
   padding: 2rem 2rem; */
   text-align: left;
-  width: 15rem;
+  width: 14rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+
+  background-color: #e5e5f7c0;
+
 }
 
 .contenedor-servicios article img {
-  height: 60px;
-  width: 60px;
+  height: 70px;
+  width: 70px;
   margin: 1rem auto;
+  
 }
 
 .contenedor-servicios article h3 {
-  margin: 3rem 1rem 2rem;
+  /* margin: 3rem 1rem 2rem; */
+  margin: 1rem auto 1rem;
 }
 
 .contenedor-servicios article p {
   font-size: 1.3rem;
-  margin: 1rem 1rem 1rem;
+  margin: 0rem auto 2rem;
   width: 80%;
 }
-
+@media (min-width: 1020px) {
+  .contenedor-servicios {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 944px;
+  }
+}
 /* css trabajos */
 
 .main-trabajos {
@@ -231,7 +309,13 @@ main {
     transition-duration: 0s;
   }
 }
-
+/* css nosotros */
+.main-nosotros{
+  text-align: center;
+}
+.contenedor-nosotros{
+  
+}
 /* css contacto */
 .main-contacto {
   text-align: center;
@@ -278,6 +362,9 @@ main {
   width: 50%;
   margin: -1rem 0rem 0rem;
 
+}
+.info-contacto article div a{
+  color:var(--c-contact-text);
 }
 
 @media (max-width: 660px) {
