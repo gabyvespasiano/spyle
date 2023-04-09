@@ -18,15 +18,17 @@
 
 
   /* footer */
-  --c-footer-background: #1234;
-  --c-footer-icons: #000000;
-  --c-footer-text:#000000;
+  --c-footer-background: #181710;
+  --c-footer-h3:#bdcdffad;
+  --c-footer-text:#547DF7;
 
-  --c-footer-follow: #000000;
-  --c-footer-follow-hover: #FFF;
+  --c-footer-icons: #547DF7;  
 
-  --c-footer-links:#fff;
-  --c-footer-links-hover:#000;
+  --c-footer-follow: #547DF7;
+  --c-footer-follow-hover: #3a57ac;
+
+  --c-footer-links:#547DF7;
+  --c-footer-links-hover:#3a57ac;
 
   --margintop:50px;
 }
@@ -113,6 +115,9 @@ main {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
   padding-top: 60px;
+}
+main h2{
+  font-size: 3rem;
 }
 
 /* css tarjetas de servicios */
@@ -572,8 +577,11 @@ form #textArea {
 /* footer */
 .footer {
   background-color: var(--c-footer-background);
+  color: var(--c-footer-text);
 }
-
+footer h3{
+  color: var(--c-footer-h3);
+}
 .footer section {
   text-align: center;
   max-width: 1200px;
@@ -699,6 +707,9 @@ align-items: center;
 .copyright p{
 margin:0 20px;
 min-width: 175px;
+}
+.copyright p a{
+  color: var(--c-footer-text);
 }
 @media (max-width: 770px) {
   .footer section {
