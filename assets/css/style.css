@@ -1,6 +1,6 @@
 :root {
   /* general */
-  --c-h2-segundario: violet;
+  --c-h2-segundario: #670afce3;
   /* header */
   --c-header-background:#1234;
   --c-header-links:#fff;
@@ -10,7 +10,10 @@
   --e: cubic-bezier(0.19, 1, 0.22, 1);
   --font-sans: 'Rubik', sans-serif;
   --font-serif: 'Cardo', serif;
-
+  /*colores seccion Nosotros */
+  --c-nosotros-principal:#670afce3;
+  --c-nosotros-nombre:#000;
+  --c-nosotros-background:#fff;
   /* colores seccion contacto */
 
 
@@ -350,9 +353,87 @@ main {
 .main-nosotros{
   text-align: center;
 }
-.contenedor-nosotros{
-  
+.contenedor-nosotros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 14rem);
+  gap: 1rem;
+  place-content: center;
 }
+.contenedor-nosotros .card{
+  /* width: calc(100% / 3 - 10px); */
+  width: 170px;
+  background: var(--c-nosotros-background);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+}
+.contenedor-nosotros .card:hover{
+  /* transform: translateY(-15px); */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.3), 0 4px 4px rgba(0, 0, 0, 0.3), 0 8px 8px rgba(0, 0, 0, 0.3), 0 16px 16px rgba(0, 0, 0, 0.3);
+}
+.contenedor-nosotros .card .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contenedor-nosotros .card .content .img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  padding: 7px;
+  background: var(--c-nosotros-principal);
+  margin-bottom: 14px;
+}
+.contenedor-nosotros .card .content .img img{
+  height: 100%;
+  width: 100%;
+  border: 3px solid var(--c-nosotros-background);
+  border-radius: 50%;
+  object-fit: cover;
+}
+.contenedor-nosotros .card .content .name{
+  color: var(--c-nosotros-nombre);
+  font-size: 20px;
+  font-weight: 500;
+}
+.contenedor-nosotros .card .content .job{
+  font-size: 20px;
+  color: var(--c-nosotros-principal);
+}
+.contenedor-nosotros .card .content .media-icons{
+  margin-top: 10px;
+  display: flex;
+}
+.contenedor-nosotros .media-icons a{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+  text-align: center;
+  line-height: 33px;
+  height: 35px;
+  width: 35px;
+  margin: 0 4px;
+  font-size: 14px;
+  color: var(--c-nosotros-background);
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: var(--c-nosotros-principal);
+  transition: all 0.3s ease;
+}
+.contenedor-nosotros .media-icons a:hover{
+  color: var(--c-nosotros-principal);
+  background-color: var(--c-nosotros-background);
+  border-color: var(--c-nosotros-principal);
+}
+
+
 /* css contacto */
 .main-contacto {
   text-align: center;
