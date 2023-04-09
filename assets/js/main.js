@@ -42,7 +42,7 @@ fetch('./assets/trabajos/proyectos.json')
     // console.log(document.querySelectorAll(".trabajos-tarjeta").length);
     // console.log(imagenes);
     for (var i = 0; i < document.querySelectorAll(".trabajos-tarjeta").length ; i++) {
-       document.querySelector(".trabajos-tarjeta:nth-child("+(i+1)+")").style.backgroundImage = "url('."+ imagenes[i] +"')";
+       document.querySelector(".trabajos-tarjeta:nth-child("+(i+1)+")").style.backgroundImage = "url('"+ imagenes[i] +"')";
     }
   });
   function imagen(a){
