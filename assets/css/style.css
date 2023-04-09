@@ -623,8 +623,9 @@ min-width: 175px;
   .footer section {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+}
 
-<<<<<<< HEAD
 .footer section svg {
   max-width: 90vw;
 }
@@ -633,13 +634,11 @@ min-width: 175px;
   0% {border-bottom: #9c64f5a4 solid;}
   50% {border-bottom: rgba(204, 0, 255, 0.897) solid;}
   100% {border-bottom: #9c64f5a4 solid;}
-=======
-  }
+  
 }
 @media (max-width: 440px) {
   .footer section {
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
   }
->>>>>>> d59e2f0108f657042754e4b0f2df906a00a8484d
 }
