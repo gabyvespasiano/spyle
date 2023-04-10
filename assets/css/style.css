@@ -2,7 +2,7 @@
   /* general */
   --c-h2-segundario: #670afce3;
   /* header */
-  --c-header-background:#1234;
+  --c-header-background:#6c4796;
   --c-header-links:#fff;
   --c-header-links-hover:#000;
   /* tarjetas trabajos*/
@@ -72,6 +72,7 @@ header{
   position: fixed;
   z-index: 20;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  
 }
 .nav-movile{
   display: none;
@@ -82,8 +83,11 @@ nav{
   display: block;
   text-decoration: underline;
 }
-nav article{
+nav .logo{
   float: left;
+}
+.logo-movile{
+  display: none;
 }
 nav ul{
   list-style: none;
@@ -91,6 +95,7 @@ nav ul{
   padding: 0;
   display: flex;
   justify-content: flex-end;
+  margin-right: 40px;
 }
 nav ul li{
 
@@ -105,6 +110,45 @@ nav ul li a:hover{
   background-size: 100% 2px;
   color: var(--c-header-links-hover);
   text-decoration: underline;
+}
+@media (max-width: 520px) {
+  header{
+    box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.3);
+  }
+  header section{
+    display: flex;
+    justify-content: center;
+    align-items: unset;
+  }
+  .nav-movile {
+    display: block;
+
+  }
+  .logo-movile{
+    display: unset;
+    margin: 0 auto;
+    transform: translateX(-25%);
+
+  }
+  .logo{
+    display: none;
+  }
+  nav{
+      display: none;
+  }
+  nav.abierto{
+    display: block;
+    float: left;
+  }
+  nav.abierto ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 }
 /* main */
 main {
@@ -175,6 +219,7 @@ main h2{
 }
 @media (max-width: 520px) {
   .contenedor-servicios {
+    justify-items: center;
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     max-width: 944px;

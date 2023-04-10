@@ -49,3 +49,9 @@ fetch('./assets/trabajos/proyectos.json')
     imagenes.push(a)
     return ""
   }
+  var navMovil = document.querySelector('.nav-movile');
+var nav = document.querySelector('nav');
+
+navMovil.addEventListener('click', function() {
+  nav.classList.toggle('abierto');
+});
