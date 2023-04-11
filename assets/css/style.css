@@ -85,9 +85,16 @@ nav{
   text-decoration: underline;
 }
 nav .logo{
-  float: left;
+  position: fixed;
+    transform: translate(-45px, -71px);
 }
 .logo-movile,.nav-movile-background, header section{
+  display: none;
+}
+.logo-normal{
+  display: block;
+}
+.logo-s{
   display: none;
 }
 nav ul{
@@ -112,7 +119,15 @@ nav ul li a:hover{
   color: var(--c-header-links-hover);
   text-decoration: underline;
 }
-@media (max-width: 520px) {
+@media (max-width: 630px) {
+  .logo-normal{
+    display: none;
+  }
+  .logo-s{
+    display: block;
+  }
+}
+@media (max-width: 538px) {
   header{
     background-color: unset; 
     box-shadow: unset;
@@ -145,6 +160,11 @@ nav ul li a:hover{
     transform: translateX(-25%);
 
   }
+  .logo-movile img{
+    width: 220px;
+    position: fixed;
+    transform: translate(-138px, -82px);
+  }
   .logo{
     display: none;
   }
@@ -155,7 +175,7 @@ nav ul li a:hover{
   nav.abierto{
     display: block;
     float: left;
-    animation: navDespliegue 3s ease 1;
+    animation: navDespliegue 1s ease 1;
   }
   @keyframes navDespliegue {
     0%{transform: translateX(-100%)}
