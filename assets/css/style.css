@@ -149,12 +149,22 @@ nav ul li a:hover{
     display: none;
   }
   nav{
-      display: none;
+      display: none; 
+      animation: navCierre 3s ease 1;
   }
   nav.abierto{
     display: block;
     float: left;
+    animation: navDespliegue 3s ease 1;
   }
+  @keyframes navDespliegue {
+    0%{transform: translateX(-100%)}
+    100%{transform: translateX(0.2%);}
+  }
+   @keyframes navCierre {
+    0%{transform: translateX(-5%);}
+    100%{transform: translateX(-100%) }
+  } 
   nav ul li a{
     color: black;
   }
