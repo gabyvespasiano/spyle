@@ -1,6 +1,7 @@
 :root {
   /* general */
   --c-h2-segundario: #670afce3;
+  
   /* header */
   --c-header-background:#6c4796;
   --c-header-links:#fff;
@@ -44,6 +45,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  
 }
 .bg{
   position: fixed;
@@ -64,7 +66,8 @@ body {
 header{
   background-color: var(--c-header-background); 
   color: var(--c-header-links);
-  font-family: 'Fredoka One', cursive;
+  /* font-family: 'Fredoka One', cursive; */
+  font-family: 'Orbitron', sans-serif;
   align-items:center;
   justify-content: space-between;
   padding: 20px;
@@ -82,7 +85,8 @@ nav{
   max-width: 1200px;
   margin: auto;
   display: block;
-  text-decoration: underline;
+  text-decoration: none;
+
 }
 nav .logo{
   position: fixed;
@@ -113,6 +117,8 @@ nav ul li a{
   text-decoration: none;
   padding: 1rem 1rem;
   transition: color 0.2s linear 0.01s;
+  
+
 }
 nav ul li a:hover{
   background-size: 100% 2px;
