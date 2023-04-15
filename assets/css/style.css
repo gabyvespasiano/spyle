@@ -1,8 +1,9 @@
 :root {
   /* general */
+  --c-h2-primario: #fff;
   --c-h2-segundario: #670afce3;
   /* header */
-  --c-header-background:#6c4796;
+  --c-header-background:#090D26;
   --c-header-links:#fff;
   --c-header-links-hover:#000;
   /* tarjetas trabajos*/
@@ -12,7 +13,7 @@
   --font-serif: 'Cardo', serif;
   /*colores seccion Nosotros */
   --c-nosotros-principal:#670afce3;
-  --c-nosotros-nombre:#000;
+  --c-nosotros-nombre:#fff;
   --c-nosotros-background:#fff;
   /* colores seccion contacto */
 
@@ -47,23 +48,17 @@ body {
 }
 .bg{
   position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    opacity: 0.3;
-    z-index: -10;
-
-    background-color: #e5e5f7;
-    opacity: 0.3;
-    background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 37.5px 37.5px, linear-gradient(#000dff 3px, transparent 3px) 0 -1.5px, linear-gradient(90deg, #000dff 3px, #e5e5f7 3px) -1.5px 0;
-    background-size: 75px 75px, 75px 75px, 37.5px 37.5px, 37.5px 37.5px;
+  top: 63px;
+  left: 0px;
+  width: 100vw;
+  z-index: -10;
+  height: 100vh;
 }
 /* NAV */
 header{
   background-color: var(--c-header-background); 
   color: var(--c-header-links);
+  box-shadow: #071359 0px 30px 60px -12px inset, #071359 0px 18px 36px -18px inset;
   font-family: 'Fredoka One', cursive;
   align-items:center;
   justify-content: space-between;
@@ -137,7 +132,7 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: unset;
-
+    
     top:0;
       background-color: var(--c-header-background); 
     color: var(--c-header-links);
@@ -148,7 +143,7 @@ nav ul li a:hover{
     width: 100vw;
     position: fixed;
     z-index: 20;
-    box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: #071359 0px 30px 60px -12px inset, #071359 0px 18px 36px -18px inset, 0 0 5px 4px rgba(0, 0, 0, 0.3);
   }
   .nav-movile {
     display: block;
@@ -231,6 +226,7 @@ main {
   padding-top: 60px;
 }
 main h2{
+  color: var(--c-h2-primario);
   font-size: 3rem;
 }
 
