@@ -261,28 +261,47 @@ h2 span{
   margin-right: auto;
   margin-left: auto;
   width: 90%;
-  margin-bottom: 60%;
+  /* margin-bottom: 60%; */
+  /* margin-bottom: 310px; */
+  margin-bottom: 40vh;
 }
 
 h1{
   color: white;
-      font-size: 10vw;
+      font-size: 8vw;
       font-family: 'Orbitron', sans-serif;
       margin-top: 40px;
+      max-width: 1080px;
   }
 
 .main-slogan h2 {
-  position: absolute;
+  /* position: absolute;
   left: 35%;
-  top: 40%;
+  top: 40%; */
+  margin: auto;
+  max-width: 698px;
 }
 
+@media (max-width: 440px) {
+  .main-slogan h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 280px) {
+  .main-slogan h2 {
+    font-size: 1.5rem;
+  }
+}
 @media (max-width: 900px) {
   h1 {
       font-size: 17vw;
   }
 }
-
+@media (max-width: 2320px) {
+  h1 {
+      font-size: 10vw;
+  }
+}
 /* css tarjetas de servicios */
 .main-servicios {
   text-align: center;

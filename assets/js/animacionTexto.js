@@ -1,6 +1,6 @@
 const maquina = document.getElementById('maquina-escribir')
 
-const fraces = ["servicios","ideas","proyectos","soluciones"]
+const fraces = ["eficiente","innovadora","efectiva","única","personalizada"]
 let contadorPalabras = 0; 
 
 
