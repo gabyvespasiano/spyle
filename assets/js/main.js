@@ -18,6 +18,7 @@ navLinks.forEach(link => {
         top: targetTop - 60, // Ajusta este valor según lo necesites
         behavior: 'smooth' // Hace que el desplazamiento sea suave
       });
+      nav.classList.toggle('abierto');
     }
   }});
 });
@@ -41,7 +42,7 @@ fetch('./assets/trabajos/proyectos.json')
     document.querySelector('.contenedor-trabajos').innerHTML = trabajosHTML;
     // console.log(document.querySelectorAll(".trabajos-tarjeta").length);
     // console.log(imagenes);
-    for (var i = 0; i < document.querySelectorAll(".trabajos-tarjeta").length ; i++) {
+    for (let i = 0; i < document.querySelectorAll(".trabajos-tarjeta").length ; i++) {
        document.querySelector(".trabajos-tarjeta:nth-child("+(i+1)+")").style.backgroundImage = "url('"+ imagenes[i] +"')";
     }
   });
@@ -49,9 +50,18 @@ fetch('./assets/trabajos/proyectos.json')
     imagenes.push(a)
     return ""
   }
-  var navMovil = document.querySelector('.nav-movile');
-var nav = document.querySelector('nav');
+  let navMovil = document.querySelector('.nav-movile');
+  let burguer = document.getElementById("burguer");
+  let plus = document.getElementById("plus");
+  let nav = document.querySelector('nav');
 
 navMovil.addEventListener('click', function() {
   nav.classList.toggle('abierto');
+  if (nav.classList.contains("abierto")){
+    burguer.classList.toggle("hidden")
+    plus.classList.toggle("hidden")
+  }else{
+    burguer.classList.toggle("hidden")
+    plus.classList.toggle("hidden")
+  }
 });

@@ -60,7 +60,9 @@ body {
   z-index: -10;
   height: 100vh;
 }
-
+.hidden{
+  display: none;
+}
 /* NAV */
 header{
   background-color: var(--c-header-background); 
@@ -80,6 +82,7 @@ header{
 }
 .nav-movile{
   display: none;
+
 }
 nav{
   max-width: 1200px;
@@ -213,6 +216,7 @@ nav.abierto .nav-movile-background{
     display: block;
     width: 50vw;
     min-width: 122px;
+    max-width: 167px;
     height: 100vh;
     background-color: white;
     z-index: -20;
@@ -225,6 +229,10 @@ nav.abierto ul li{
 nav.abierto ul li a{
   padding: 0.5rem 1rem;
 }
+nav.abierto ul li a:hover {
+  color: #0128ff;
+}
+
 }
 
 
