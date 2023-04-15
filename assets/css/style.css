@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 :root {
   /* general */
   --c-h2-primario: #fff;
-  --c-h2-segundario: #670afce3;
+  --c-h2-segundario: #e7e7e7;
   
   /* header */
   --c-header-background:#090D26;
@@ -13,7 +14,7 @@
   --font-sans: 'Rubik', sans-serif;
   --font-serif: 'Cardo', serif;
   /*colores seccion Nosotros */
-  --c-nosotros-principal:#670afce3;
+  --c-nosotros-principal:#001cb5;
   --c-nosotros-nombre:#fff;
   --c-nosotros-background:#fff;
   /* colores seccion contacto */
@@ -120,7 +121,7 @@ nav ul li a:hover{
   text-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
   
 }
-@media (max-width: 630px) {
+@media (max-width: 710px) {
   .logo-normal{
     display: none;
   }
@@ -128,7 +129,7 @@ nav ul li a:hover{
     display: block;
   }
 }
-@media (max-width: 538px) {
+@media (max-width: 605px) {
   header{
     background-color: unset; 
     box-shadow: unset;
@@ -238,7 +239,7 @@ main h2{
 }
 h2 span{
   color: var(--c-h2-segundario);
-  
+  text-shadow: 0 0 10px #0128ff, 0 0 40px #0128ff, 0 0 80px #0128ff;
 }
 
 /* css tarjetas de servicios */
@@ -253,7 +254,7 @@ h2 span{
   grid-template-columns: repeat(auto-fit, 14rem);
   max-width: 944px;
   gap: 1rem;
-  
+  font-family: 'Itim', cursive, sans-serif;
   /* text-align: unset;
   margin-right: unset;
   margin-left: unset; */
@@ -271,7 +272,7 @@ h2 span{
   border: 1px solid #aaa;
   border-radius: 1rem;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   /* margin: 1rem;
   padding: 2rem 2rem; */
   text-align: left;
@@ -295,7 +296,9 @@ h2 span{
 .contenedor-servicios article h3 {
   /* margin: 3rem 1rem 2rem; */
   margin: 1rem auto 1rem;
-  font-family: 'Orbitron', sans-serif;
+  /* font-family: 'Orbitron', sans-serif; */
+  font-family: 'Itim', cursive, sans-serif;
+  font-size: 1.7em;
 }
 
 .contenedor-servicios article p {
@@ -401,6 +404,7 @@ h2 span{
   font-size: 1.3rem;
   font-weight: bold;
   line-height: 1.2;
+  font-family: 'Itim', cursive, sans-serif;
 }
 
 .trabajos-tarjeta-contenedor p {
