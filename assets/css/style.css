@@ -18,7 +18,12 @@
   --c-nosotros-nombre:#fff;
   --c-nosotros-background:#fff;
   /* colores seccion contacto */
+    
+  /* animacio */
 
+--c-form-animacion-1:#071359;
+--c-form-animacion-2:#425df7;
+--c-form-animacion-3:#0820A6;
 
   /* footer */
   --c-footer-background: #181710;
@@ -55,6 +60,7 @@ body {
   z-index: -10;
   height: 100vh;
 }
+
 /* NAV */
 header{
   background-color: var(--c-header-background); 
@@ -240,6 +246,33 @@ main h2{
 h2 span{
   color: var(--c-h2-segundario);
   text-shadow: 0 0 10px #0128ff, 0 0 40px #0128ff, 0 0 80px #0128ff;
+}
+/* css slogan */
+.main-slogan {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  margin-bottom: 60%;
+}
+
+h1{
+  color: white;
+      font-size: 10vw;
+      font-family: 'Orbitron', sans-serif;
+      margin-top: 40px;
+  }
+
+.main-slogan h2 {
+  position: absolute;
+  left: 35%;
+  top: 40%;
+}
+
+@media (max-width: 900px) {
+  h1 {
+      font-size: 17vw;
+  }
 }
 
 /* css tarjetas de servicios */
@@ -606,30 +639,32 @@ h2 span{
 }
 form #inputNombre, #inputCorreo{
   border:0;
-  border-bottom: #7325f169 solid;
+  border-bottom: var(--c-form-animacion-2) solid;
   outline: none;
   width: 98%;
-  color: black;
+  color: white;
   letter-spacing: 2px;
   font-size: medium;
+  background-color: transparent;
 }
 
 form label {
   text-align: left;
   margin-bottom: 2%;
   letter-spacing: 2px;
-  color: #3a098adc;
+  color: #fff;
   font-style: bolder;
-  font-size: larger;
+  font-size: 150%;
+  font-family: 'Itim', cursive, sans-serif;
 }
 
 form #inputNombre:focus, #inputCorreo:focus {
-  border-bottom: solid #39088ab9;
+  border-bottom: solid #1d0cb6b9;
   animation:ease-in 2s ;
   animation: inputColor 1s infinite;
 }
 #selectAsunto {
-background-color: #670afce3;
+background-color: var(--c-footer-follow);
 color: white;
 height: 10%;
 font-size: medium;
@@ -643,7 +678,7 @@ letter-spacing: 0.5px;
 
 #selectAsunto:hover{
 
-  background-color:  #8d48fdee ;
+  background-color:  var(--c-form-animacion-3) ;
 }
 
 /* #selectAsunto option::selection::after{
@@ -658,36 +693,50 @@ form #textArea {
 
 }
 .boton {
-  height: 2rem;
+  height: 3rem;
   border: none ;
-  background-color: #9c64f5a4 ;
+  background-color: #3585ee ;
   color: white;
   border-radius: 1rem;
 }
 
 .boton:hover{
-  background-color: #670afce3;
+  background-color: #3585ee;
     color: white;
     /* font-size: larger; */
-    box-shadow: 0 0 10px #7325f169, 0 0 40px #7325f169, 0 0 80px #7325f169;
+    box-shadow: 0 0 10px #3585ee, 0 0 40px #3585ee, 0 0 80px #3585ee;
     border: #fff;
     
   }
+.main-contacto .contenedor-contacto form:hover{
 
-.info-contacto {
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+  .contacto-follow{
+    width: 100%;
+    height: 100%;
+  }
+
+.info-contacto .contacto-follow article{ 
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 100%;
-  justify-content: center;
+  height: 100%;
+  
+  justify-content: space-evenly;
 }
 
-.info-contacto article {
+.contacto-follow h3 {
   display: none;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  align-items: center;
 }
+.contacto-follow a {
+  color: var(--c-footer-follow);
+}
+.contacto-follow a svg{
+  width: 30%;
+}
+
 
 .info-contacto article div {
   text-align: left;
@@ -702,9 +751,18 @@ form #textArea {
   color:var(--c-contact-text);
 }
 
+
 @media (max-width: 660px) {
   .contenedor-contacto {
     grid-template-columns: auto;
+  }
+
+  .info-contacto .contacto-follow article{
+    flex-direction: row;
+  }
+
+  .contacto-follow article a svg{
+    width: 100%;
   }
 }
 
@@ -814,7 +872,7 @@ align-items: center;
   font-weight: bold;
   transition: color 0.2s linear 0.01s;
 }
-.footer-enlaces ul li a:hover{
+.footer-enlaces ul li a, .contacto-follow a:hover{
   color: var(--c-footer-links-hover);
 }
 .footer section svg {
@@ -858,9 +916,9 @@ min-width: 175px;
 }
 
 @keyframes inputColor {
-  0% {border-bottom: #9c64f5a4 solid;}
-  50% {border-bottom: rgba(204, 0, 255, 0.897) solid;}
-  100% {border-bottom: #9c64f5a4 solid;}
+  0% {border-bottom: var(--c-form-animacion-2) solid;}
+  50% {border-bottom: var(--c-form-animacion-3) solid;}
+  100% {border-bottom: var(--c-form-animacion-2) solid;}
   
 }
 @media (max-width: 440px) {
