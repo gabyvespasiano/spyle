@@ -48,7 +48,7 @@ body {
 }
 .bg{
   position: fixed;
-  top: 63px;
+  top: 60px;
   left: 0px;
   width: 100vw;
   z-index: -10;
@@ -59,7 +59,7 @@ header{
   background-color: var(--c-header-background); 
   color: var(--c-header-links);
   font-family: 'Orbitron', sans-serif;
-  box-shadow: #071359 0px 30px 60px -12px inset, #071359 0px 18px 36px -18px inset;
+  
 
   align-items:center;
   justify-content: space-between;
@@ -68,7 +68,7 @@ header{
   position: fixed;
   top: 0;
   z-index: 20;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: #071359 0px 30px 60px -12px inset, #071359 0px 18px 36px -18px inset,2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   
 }
 .nav-movile{
