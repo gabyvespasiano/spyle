@@ -1,9 +1,9 @@
 [
     {
-        "nombre": "TA TE TI (Online)",
-        "descripcion": "se realizo el famoso juego de TATETI (3 en linea) online",
-        "imagen": "./assets/trabajos/imagen1.jpeg",
-        "link": "https://gabyvespa.ar/tateti"
+        "nombre": "Spyle Landing Page",
+        "descripcion": "Pagina principal de una web de desarrolladores",
+        "imagen": "./assets/trabajos/spyle.jpeg",
+        "link": "https://gabyvespasiano.github.io/spyle/"
     },
     {
         "nombre": "TA TE TI (Online)",
