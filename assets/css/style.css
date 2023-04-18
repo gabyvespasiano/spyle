@@ -307,6 +307,8 @@ h1{
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+  overflow: hidden;
+
 }
 
 .contenedor-servicios {
